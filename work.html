@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Container Crew - Real Container Conversions</title>
+<meta name="description" content="See real builds: Retail shops, coffee shops, offices & homes. Henselite Bowls Shop and more. One Container. Endless Possibilities.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { gold: '#C9A86A', darkgold: '#8C6A32', blacksoft: '#0a0a0a' },
+      fontFamily: { display: ['Anton','sans-serif'], body: ['Inter','sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+.gold-gradient { background: linear-gradient(180deg,#FFD27A 0%, #C9A86A 40%, #8C6A32 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.gold-bg { background: linear-gradient(90deg,#C9A86A,#8C6A32); }
+.gold-border { border: 1px solid rgba(201,168,106,0.35); }
+.work-card:hover.work-overlay { opacity: 1; }
+</style>
+</head>
+<body class="bg-blacksoft text-white font-body antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="Container Crew" class="h-10 w-auto">
+      <span class="font-display tracking-wider text-xl">CONTAINER <span class="text-gold">CREW</span></span>
+    </a>
+    <div class="hidden md:flex gap-8 text-xs tracking-widest items-center">
+      <a href="index.html" class="hover:text-gold">HOME</a>
+      <a href="features.html" class="hover:text-gold">FEATURES</a>
+      <a href="work.html" class="text-gold border-b border-gold pb-1">OUR WORK</a>
+      <a href="index.html#contact" class="gold-bg text-black px-5 py-2 font-bold">GET QUOTE</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 pb-10 max-w-7xl mx-auto px-6">
+  <p class="text-gold tracking-[0.3em] text-xs">PROOF, NOT RENDERS</p>
+  <h1 class="font-display text-6xl md:text-8xl uppercase leading-[0.9] mt-3">Real Shops.<br><span class="gold-gradient">Real Money.</span></h1>
+  <p class="mt-6 text-white/60 max-w-2xl">One container, endless possibilities. Homes, offices, retail & coffee shops — built to trade. Click any build to enlarge.</p>
+</section>
+
+<!-- FILTER -->
+<div class="max-w-7xl mx-auto px-6 flex gap-3 text- tracking-widest overflow-x-auto pb-6">
+  <button data-filter="all" class="filter-btn gold-bg text-black px-4 py-2 font-bold">ALL</button>
+  <button data-filter="retail" class="filter-btn border border-white/20 px-4 py-2">RETAIL</button>
+  <button data-filter="coffee" class="filter-btn border border-white/20 px-4 py-2">COFFEE / FOOD</button>
+  <button data-filter="office" class="filter-btn border border-white/20 px-4 py-2">OFFICE</button>
+  <button data-filter="home" class="filter-btn border border-white/20 px-4 py-2">HOMES</button>
+</div>
+
+<!-- FEATURED CASE STUDY - HENSELITE -->
+<section class="max-w-7xl mx-auto px-6 py-10">
+  <div class="bg-neutral-900 gold-border p-2 md:p-3">
+    <div class="grid md:grid-cols-3 gap-2">
+      <!-- EDIT: Replace with your Henselite images -->
+      <div class="md:col-span-2 aspect-[16/10] bg-neutral-800">
+        <img src="assets/work-henselite-front.jpg" alt="Henselite Bowls Shop Front View" class="w-full h-full object-cover cursor-pointer gallery-img" data-category="retail">
+      </div>
+      <div class="grid grid-rows-2 gap-2">
+        <div class="bg-neutral-800 aspect-[16/9]"><img src="assets/work-henselite-top.jpg" alt="Top View Layout - Till, Apparel Rail" class="w-full h-full object-cover cursor-pointer gallery-img" data-category="retail"></div>
+        <div class="bg-neutral-800 aspect-[16/9]"><img src="assets/work-henselite-back.jpg" alt="Back View - Exit Door Solar" class="w-full h-full object-cover cursor-pointer gallery-img" data-category="retail"></div>
+      </div>
+    </div>
+    <div class="p-6 md:p-8 flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <p class="text-gold text-xs tracking-widest">CASE STUDY 01 — HENSELITE BOWLS SHOP</p>
+        <h2 class="font-display text-3xl uppercase mt-2">6m x 2.4m Retail Shop — Solar Trader Package</h2>
+        <p class="mt-3 text-white/60 text-sm max-w-xl">Client needed a secure, branded retail space with display shelving, apparel rail, till & pay area and seating. We delivered with full ACM signage and solar off-grid system. Ready to trade in 21 days.</p>
+      </div>
+      <div class="md:text-right">
+        <p class="text-xs text-white/40 tracking-widest">INCLUDES</p>
+        <p class="text-sm mt-1">Glass Front + ACM Signage + Solar + Till Area + Display Shelves</p>
+        <a href="index.html#contact" class="inline-block mt-4 gold-bg text-black px-6 py-3 text-xs font-bold tracking-widest">BUILD MINE LIKE THIS</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-2" id="gallery">
+    <!-- COPY PASTE THESE TO ADD MORE - JUST CHANGE src AND data-category -->
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="retail">
+      <img src="assets/work-1.jpg" alt="Container Retail Shop" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">RETAIL SHOP #2</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="coffee">
+      <img src="assets/work-2.jpg" alt="Container Coffee Shop" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">COFFEE SHOP</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="office">
+      <img src="assets/work-3.jpg" alt="Container Office" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">OFFICE POD</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="home">
+      <img src="assets/work-4.jpg" alt="Container Home" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">CONTAINER HOME</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="retail">
+      <img src="assets/work-5.jpg" alt="Retail Container Interior" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">RETAIL INTERIOR</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="coffee">
+      <img src="assets/work-6.jpg" alt="Coffee Bar Interior" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">COFFEE BAR</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="home">
+      <img src="assets/work-7.jpg" alt="Container Living Room" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">LIVING POD</p></div>
+    </div>
+    <div class="work-card relative aspect-[4/3] bg-neutral-900 overflow-hidden group cursor-pointer" data-category="office">
+      <img src="assets/work-8.jpg" alt="Office Interior" class="w-full h-full object-cover gallery-img">
+      <div class="work-overlay absolute inset-0 bg-black/70 opacity-0 transition flex items-end p-4"><p class="font-display">OFFICE INTERIOR</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO PLACEHOLDER -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="bg-black border border-white/10 p-12 text-center">
+    <p class="text-gold tracking-widest text-xs">WALKTHROUGH</p>
+    <h3 class="font-display text-4xl mt-2">Video Tours Sell 10x Faster</h3>
+    <p class="text-white/50 text-sm mt-2">Replace this box with your TikTok / Reel embed</p>
+    <!-- EDIT: Paste your YouTube or video tag here -->
+    <div class="mt-6 aspect-video bg-neutral-900 flex items-center justify-center text-white/20">assets/video-tour.mp4</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 text-center border-t border-white/10">
+  <h2 class="font-display text-5xl uppercase">Your Shop Could Be <span class="gold-gradient">Next</span></h2>
+  <p class="mt-4 text-white/60">Send your idea, get a layout + fixed price in 24hrs. Only 4 builds per month.</p>
+  <a href="index.html#contact" class="inline-block mt-8 gold-bg text-black px-10 py-4 font-extrabold tracking-widest">GET MY FIXED PRICE</a>
+</section>
+
+<footer class="border-t border-white/10 py-8 text-center tracking-widest text-white/30">
+  <p class="text- md:text-xs">© 2026 Container Crew — For All Container Conversions — Durban, South Africa</p>
+  <p class="mt-3 text- tracking-[0.2em]">Designed and managed by <a href="https://thisiskinglis.com" target="_blank" rel="noopener" class="text-gold hover:text-white transition">thisiskinglis.com</a></p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 bg-black/90 hidden z-[100] items-center justify-center p-6">
+  <img id="lightbox-img" src="" class="max-h- max-w- object-contain">
+  <button onclick="document.getElementById('lightbox').classList.add('hidden')" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+</div>
+
+<a href="https://wa.me/27711186036" class="fixed bottom-6 right-6 gold-bg text-black p-4 rounded-full font-bold shadow-lg">WA</a>
+
+<script>
+// Filter
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('gold-bg','text-black'));
+    btn.classList.add('gold-bg','text-black');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('#gallery [data-category]').forEach(card=>{
+      card.style.display = (f==='all' || card.dataset.category===f)? 'block' : 'none';
+    });
+  });
+});
+// Lightbox
+document.querySelectorAll('.gallery-img').forEach(img=>{
+  img.addEventListener('click',()=>{
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').classList.remove('hidden');
+    document.getElementById('lightbox').classList.add('flex');
+  });
+});
+</script>
+</body>
+</html>
